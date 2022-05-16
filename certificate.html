@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge1</title>
+</head>
+<style>
+    .ch1 {
+        margin-right: auto;
+        margin-left: auto;
+        background-color: coral;
+        padding: 20px 15px;
+        font: 15px Arial;
+        color: rgb(34, 75, 151);
+        border-radius: 10px;
+        max-width: 700px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 4%;
+        box-shadow: 10px 10px 1px 1px rgb(255, 225, 89);
+        text-align: center;
+    }
+    body{
+        background: rgb(254,255,153);
+        background: linear-gradient(0deg, rgba(254,255,153,1) 0%, rgba(127,254,255,1) 99%);
+    }
+    .ch1 h1 {
+        font: bold;
+        display: block;
+        background-color: gold;
+        padding: 10px 0px 5px 10px;
+        text-align: center;
+        margin: -20px -20px 0px -20px;
+        border-bottom: 1px solid grey;
+        border-radius: 5%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+            Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 50px;
+        color: rgb(22, 190, 202);
+        text-shadow: 3px 2px rgb(240, 63, 51);
+    }
+
+    .ch1 h1>span {
+        display: block;
+        color: red;
+        font-size: medium;
+        text-shadow: none;
+    }
+
+    .ch1 label {
+        display: block;
+        margin: 10px;
+    }
+
+    .ch1 label>span {
+        float: left;
+        margin-top: 5px;
+        color: rgb(8, 99, 202);
+        font-weight: 548;
+        font-size: 25px;
+        text-decoration-line: underline;
+        text-shadow: 1px 1px crimson;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        padding-bottom: 5px;
+    }
+
+    .ch1 input[type="text"],
+    .ch1 input[type="number"],
+    .ch1 input[type="email"],
+    .ch1 textarea,
+    .ch1 select {
+        color: rgb(228, 84, 68);
+        width: 100%;
+        height: 25px;
+        font-size: large;
+        font-weight: bold;
+        border: none;
+        border-radius: 10%;
+        background: azure;
+        box-shadow: 5px 5px 1px 1px rgb(255, 182, 182);
+    }
+
+    .ch1 textarea {
+        height: 100px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .ch1 select {
+        height: 30px;
+    }
+
+    .ch1 .submit {
+        background-color: rgb(74, 183, 197);
+        border-radius: 5px;
+        border: none;
+        padding: 8px;
+        font-weight: bolder;
+        color: darkblue;
+        font-size: 15px;
+        margin-top: 10px;
+        /* margin-left: 44%; */
+        margin-bottom: -25px;
+        font-size: 18px;
+        width: fit-content;
+        font-weight: 2000;
+        border-radius: 20%;
+        box-shadow: 5px 5px crimson;
+        font-family: monospace;
+        margin-bottom: -15px;
+    }
+
+    .submit:active {
+        box-shadow: 2px 2px crimson;
+        transform: translateX(3px) translateY(3px);
+    }
+
+    .ch1 .submit:hover {
+        color: rgb(150, 39, 19);
+    }
+
+    textarea,
+    input,
+    select {
+        outline: none;
+    }
+
+    #invalid,
+    #invalid1 {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .message {
+        display: block;
+        top: 30%;
+        left: 50%;
+        margin-left: -210px;
+        width: 410px;
+        height: fit-content;
+        border-radius: 25%;
+        position: fixed;
+        box-shadow: 8px 8px 5px 6px greenyellow;
+        background-color: rgb(248, 252, 201);
+        animation: comein 1s ease 0s;
+    }
+    .message h2 {
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        color: rgb(241, 109, 21);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+        text-decoration-line: underline;
+    }
+    
+    .message p ,.message2 p {
+        font-size: larger;
+        font-family: cursive;
+        color: indianred;
+        margin-left: 1px;
+    }
+    #footer{
+    margin-top: 6%;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.a{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.icon{
+    width: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon:hover{
+    padding: 3px;
+    border-radius: 25%;
+    opacity: 0.5;
+    background-color: rgb(217, 243, 243);
+}
+    .done,
+    .back {
+        border: none;
+        font-size: large;
+        box-shadow: 1px 1px crimson;
+        font-weight: bold;
+        color: darkblue;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+        border-radius: 15%;
+        padding: 5px;
+    }
+    
+    .back {
+        margin-left: 60px;
+    }
+    
+    .done:hover {
+        background-color: aqua;
+    }
+    
+    .back:hover {
+        background-color: aqua;
+    }
+    
+    .done {
+        background-color: greenyellow;
+    }
+    .message1{
+        display: block;
+        top: 30%;
+        left: 50%;
+        margin-left: -210px;
+        width: 400px;
+        height: 25%;
+        border-radius: 25%;
+        position: fixed;
+        box-shadow: 8px 8px 5px 6px greenyellow;
+        background-color: rgb(248, 252, 201);
+        animation: leave 1s ease-out 0s;
+        visibility: hidden;
+    }
+    @media screen and (max-width:680px) {
+    body{
+        font-size: 18px;
+    }
+    .icon{
+        width: 8%;
+    }
+}
+    .message2{
+        display: block;
+        top: 30%;
+        left: 50%;
+        margin-left: -210px;
+        width: 200px;
+        height: 12%;
+        border-radius: 25%;
+        position: fixed;
+        box-shadow: 8px 8px 5px 6px rgb(255, 47, 47);
+        background-color: rgb(252, 201, 201);
+    }
+    .message3{
+        display: block;
+        top: 30%;
+        left: 50%;
+        margin-left: -210px;
+        width: 200px;
+        height: 12%;
+        border-radius: 25%;
+        position: fixed;
+        box-shadow: 8px 8px 5px 6px rgb(255, 47, 47);
+        background-color: rgb(252, 201, 201);
+        animation: leave 1s ease-out 0s;
+        visibility: hidden;
+    }
+    #git{
+    background-color: rgba(240, 248, 255, 0.988);
+    border-radius: 50%;
+}
+    .back {
+        background-color: khaki;
+    }
+
+    @keyframes comein {
+        0% {
+            top: 80%;
+            opacity: 10%;
+        }
+
+        100% {
+            top: 30%;
+            opacity: 100%;
+        }
+    }
+    @keyframes leave {
+        0%{
+            top: 30%;
+            opacity: 50%;
+            visibility: visible;
+        }
+        100%{
+            top: 80%;
+            opacity: 0%;
+            visibility: visible;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .message ,.message1{
+            margin-left: none;
+            left: 60%;
+            height: fit-content;
+            width: 270px;
+            padding: 4px;
+            overflow-wrap: break-word;
+        }
+        .message2, .message3{
+            left: 300px;
+        }
+        .ch1{
+            margin: 8px;
+        }
+        .message h2  {
+            font-size: 25px;
+        }
+        .ch1 h1{
+            font-size: 38px;
+            text-shadow: none;
+        }
+        .message p , .message2 p{
+            font-size: 20px;
+        }
+        .ch1 .submit{
+            margin-left: 150px;
+            width: fit-content;
+        }
+
+        .done,
+        .back {
+            font-size: 20px;
+            margin-left: 15px;
+        }
+    }
+</style>
+
+<body>
+    <form class="ch1" name="certify-detail" id="fm">
+        <div id="f1">
+            <h1>
+                Certificate Details.. <br />
+                <span>*all details are mandatory to fill</span>
+            </h1>
+            <label>
+                <span>Name:</span>
+                <input type="text" id="name" name="name"   placeholder="Full name" required />
+                <p id="invalid" style="color: rgb(218, 25, 63)"></p>
+            </label>
+            <label> 
+                <span>Subject:</span>
+                <select name="subject" id="subject">
+                    <option value="">Select the title for your Certificate</option>
+                    <option value="appreciation">Certificate of appreciation</option>
+                    <option value="completion">Certificate for completion</option>
+                    <option value="Excellence">Certificate of Excellence</option>
+                </select>
+                <label>
+                    <span>Email id:</span>
+                    <input type="email" name="email" id="email" placeholder="form123@abc" required />
+                </label>
+            </label>
+            <label>
+                <span>Message:</span>
+                <textarea id="msg" name="message" placeholder="short message to describe" required></textarea>
+            </label>
+            <label>
+                <button class="submit" type="submit" name="submit" id="submit">Submit</button>
+            </label>
+        </div>
+        <div id="confirm"></div>
+    </form>
+    <div id="footer">
+        <a href="https://www.linkedin.com/in/ayush-agarwal52" target="_blank"><img src="img/linkedinIcon.png"
+                alt="linkedin" style="border-radius: 5px;" class="icon"></a>
+        <a href="https://github.com/agarwalayush9" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="Github"
+                id="git" class="icon" style="margin-left: 30px;"></a><br>
+        <a class="a" href="#">Created By Ayush Agarwal| &copy; 2022 All rights reserved </a>
+    </div>
+    <!-- java script -->
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let fm= document.getElementById("fm");                                               
+        const name = document.getElementById("name");
+       let msg = document.getElementById("msg");
+        const email = document.getElementById("email");
+        let subject= document.getElementById("subject");
+        let validName;
+        let validNumber;
+        name.addEventListener("blur", () => {
+            // console.log("name");
+            let reg = /^([a-zA-Z])[a-zA-Z\s]{2,30}$/;
+            let input = name.value;
+            console.log(reg, input);
+
+            if (reg.test(input)) {
+                console.log("valid");
+                let invalid = document.getElementById("invalid");
+                invalid.innerHTML = ``;
+                let name1 = document.getElementById("name");
+                name1.setAttribute("style", "none");
+                validName = true;
+            } else {
+                console.log("invalid");
+                let invalid = document.getElementById("invalid");
+                invalid.innerHTML = `atleast 3 letters, !Numbers not allowed `;
+                let name1 = document.getElementById("name");
+                name1.setAttribute("style", "border:5px solid crimson");
+                validName = false;
+            }
+        });
+        console.log(subject.value);
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", () => {
+            if ((validName == true) && subject.value!='') {
+                let f1 = document.getElementById("f1");
+                f1.setAttribute("style", "filter: blur(5px);");
+                let message = document.getElementById("confirm");
+                message.setAttribute("class", "message");
+                message.innerHTML = `
+                <h2> Details Submitted ! </h2>
+                <p>Thanks <b style="color:red;"> ${name.value} </b> for filling your Details..<br> Your Certificate is generated and is being sent to your mentioned mail id <b>${email.value}</b></p>
+                <br>
+                <button id="back" class="back"> OK </button>`;
+                let back = document.getElementById("back");
+                back.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    console.log("back");
+                    message.removeAttribute("class","message");
+                    message.setAttribute("class","message1");
+                    f1.removeAttribute("style", "filter: blur(5px);");
+                    message.innerHTML = ``;
+                });
+            } else {
+                console.log("invalid");
+                let f1 = document.getElementById("f1");
+                f1.setAttribute("style", "filter: blur(5px);");
+                let message = document.getElementById("confirm");
+                message.setAttribute("class","message2");
+                message.innerHTML = `
+                <p>Enter valid details</p>
+                <button id="back" class="back">GO back</button>`;
+
+                 let back = document.getElementById("back");
+                back.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    console.log("back");
+                    message.removeAttribute("class","message2");
+                    message.setAttribute("class","message3");
+                    f1.removeAttribute("style", "filter: blur(5px);");
+                    message.innerHTML = ``;
+                });
+            }
+        });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw74pWf7uGF7uwRvKqqT9xuQ5Nd46rT1KTVr8ZOwYAyGI1nBRr7HWBth4FXpAZL7pgL/exec'
+        const form = document.forms['certify-detail']
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response =>{
+                    fm.reset();
+                }).catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script src="https://script.google.com/macros/library/d/15bGqvSE1dBcyJk1OHd9ov1dybLNH1JxK43mdF8vAbXIR6lyG5VqtJpwt/2"></script>
+</body>
+</html>
